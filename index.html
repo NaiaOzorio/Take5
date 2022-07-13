@@ -16,7 +16,7 @@
     <p>Player 2
         <input type="number" id="txtPlayer2"/>
         <button onclick="sumScorePlayer2()">Ok</button>
-        <span id="lblResultPlayer2"></span>
+        <span id="lblResultPlayer2"></span> 
     </p>
     <p>Player 3
         <input type="number" id="txtPlayer3"/>
@@ -37,7 +37,8 @@
         <input type="number" id="txtPlayer6"/>
         <button onclick="sumScorePlayer6()">Ok</button>
         <span id="lblResultPlayer6"></span>
-    </p>
+    </p> <br>
+        <button onclick="newGame()">New Game</button>
     <script>
         var player1Sum = 0;
         function sumScorePlayer1() {
@@ -110,6 +111,30 @@
             document.getElementById("txtPlayer6").value = "";
             document.getElementById("txtPlayer1").focus(); 
         } 
+
+        function newGame() {
+            document.getElementById("txtPlayer1").value = "";
+            document.getElementById("txtPlayer2").value = "";
+            document.getElementById("txtPlayer3").value = "";
+            document.getElementById("txtPlayer4").value = "";
+            document.getElementById("txtPlayer5").value = "";
+            document.getElementById("txtPlayer6").value = "";
+
+            document.getElementById("lblResultPlayer1").innerHTML = "";
+            document.getElementById("lblResultPlayer2").innerHTML = "";
+            document.getElementById("lblResultPlayer3").innerHTML = "";
+            document.getElementById("lblResultPlayer4").innerHTML = "";
+            document.getElementById("lblResultPlayer5").innerHTML = "";
+            document.getElementById("lblResultPlayer6").innerHTML = "";
+
+            player1Sum = 0;
+            player2Sum = 0;
+            player3Sum = 0;
+            player4Sum = 0;
+            player5Sum = 0;
+            player6Sum = 0;
+
+        }
         
     </script>
 
