@@ -16,6 +16,10 @@
     <script>
         var player1Sum = 0;
         function sumScore() {
+            if (document.getElementById("txtPlayer1").value === "") {
+                alert("Please type a valid number.");
+                return;
+            }
             player1Sum += parseInt(document.getElementById("txtPlayer1").value);
             document.getElementById("lblResultPlayer1").innerHTML = player1Sum;
             document.getElementById("txtPlayer1").value = "";
