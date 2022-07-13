@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take 5 Score Counter</title>
+</head>
+<body>
+    <h1>Take 5 Score Counter</h1>
+    <p>Player 1
+        <input type="number" id="txtPlayer1"/>
+        <button onclick="sumScore()">Ok</button>
+        <span id="lblResultPlayer1"></span>
+    </p>
+    <script>
+        var player1Sum = 0;
+        function sumScore() {
+            player1Sum += parseInt(document.getElementById("txtPlayer1").value);
+            document.getElementById("lblResultPlayer1").innerHTML = player1Sum;
+            document.getElementById("txtPlayer1").value = "";
+        }   
+    </script>
+
+</body>
+</html>
