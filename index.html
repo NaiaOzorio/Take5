@@ -10,12 +10,17 @@
     <h1>Take 5 Score Counter</h1>
     <p>Player 1
         <input type="number" id="txtPlayer1"/>
-        <button onclick="sumScore()">Ok</button>
+        <button onclick="sumScorePlayer1()">Ok</button>
         <span id="lblResultPlayer1"></span>
+    </p>
+    <p>Player 2
+        <input type="number" id="txtPlayer2"/>
+        <button onclick="sumScorePlayer2()">Ok</button>
+        <span id="lblResultPlayer2"></span>
     </p>
     <script>
         var player1Sum = 0;
-        function sumScore() {
+        function sumScorePlayer1() {
             if (document.getElementById("txtPlayer1").value === "") {
                 alert("Please type a valid number.");
                 return;
@@ -24,6 +29,17 @@
             document.getElementById("lblResultPlayer1").innerHTML = player1Sum;
             document.getElementById("txtPlayer1").value = "";
         }   
+        
+        var player2Sum = 0;
+        function sumScorePlayer2() {
+            if (document.getElementById("txtPlayer2").value === "") {
+                alert("Please type a valid number.");
+                return;
+            }
+            player2Sum += parseInt(document.getElementById("txtPlayer2").value);
+            document.getElementById("lblResultPlayer2").innerHTML = player2Sum;
+            document.getElementById("txtPlayer2").value = "";
+        }  
     </script>
 
 </body>
