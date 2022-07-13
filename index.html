@@ -18,6 +18,26 @@
         <button onclick="sumScorePlayer2()">Ok</button>
         <span id="lblResultPlayer2"></span>
     </p>
+    <p>Player 3
+        <input type="number" id="txtPlayer3"/>
+        <button onclick="sumScorePlayer3()">Ok</button>
+        <span id="lblResultPlayer3"></span>
+    </p>
+    <p>Player 4
+        <input type="number" id="txtPlayer4"/>
+        <button onclick="sumScorePlayer4()">Ok</button>
+        <span id="lblResultPlayer4"></span>
+    </p>
+    <p>Player 5
+        <input type="number" id="txtPlayer5"/>
+        <button onclick="sumScorePlayer5()">Ok</button>
+        <span id="lblResultPlayer5"></span>
+    </p>
+    <p>Player 6
+        <input type="number" id="txtPlayer6"/>
+        <button onclick="sumScorePlayer6()">Ok</button>
+        <span id="lblResultPlayer6"></span>
+    </p>
     <script>
         var player1Sum = 0;
         function sumScorePlayer1() {
@@ -40,6 +60,50 @@
             document.getElementById("lblResultPlayer2").innerHTML = player2Sum;
             document.getElementById("txtPlayer2").value = "";
         }  
+        
+        var player3Sum = 0;
+        function sumScorePlayer3() {
+            if (document.getElementById("txtPlayer3").value === "") {
+                alert("Please type a valid number.");
+                return;
+            }
+            player3Sum += parseInt(document.getElementById("txtPlayer3").value);
+            document.getElementById("lblResultPlayer3").innerHTML = player3Sum;
+            document.getElementById("txtPlayer3").value = "";
+        } 
+        
+        var player4Sum = 0;
+        function sumScorePlayer4() {
+            if (document.getElementById("txtPlayer4").value === "") {
+                alert("Please type a valid number.");
+                return;
+            }
+            player4Sum += parseInt(document.getElementById("txtPlayer4").value);
+            document.getElementById("lblResultPlayer4").innerHTML = player4Sum;
+            document.getElementById("txtPlayer4").value = "";
+        } 
+        
+        var player5Sum = 0;
+        function sumScorePlayer5() {
+            if (document.getElementById("txtPlayer5").value === "") {
+                alert("Please type a valid number.");
+                return;
+            }
+            player5Sum += parseInt(document.getElementById("txtPlayer5").value);
+            document.getElementById("lblResultPlayer5").innerHTML = player5Sum;
+            document.getElementById("txtPlayer5").value = "";
+        } 
+        
+        var player6Sum = 0;
+        function sumScorePlayer6() {
+            if (document.getElementById("txtPlayer6").value === "") {
+                alert("Please type a valid number.");
+                return;
+            }
+            player6Sum += parseInt(document.getElementById("txtPlayer6").value);
+            document.getElementById("lblResultPlayer6").innerHTML = player6Sum;
+            document.getElementById("txtPlayer6").value = "";
+        } 
     </script>
 
 </body>
